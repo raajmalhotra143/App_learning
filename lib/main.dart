@@ -1,5 +1,20 @@
 import 'package:flutter/material.dart';
 
+String getFullName(String FirstName, String lastName) {
+  return "$FirstName $lastName"; //creating function here
+}
+String conditions(){
+var age= 20 ;
+if (age==21){
+  print("age is 21")
+}else if (age == 22){
+print("Age is 22")
+}else {
+  print("Age is 20")
+}
+
+
+}
 void main() {
   runApp(const MyApp());
 }
@@ -10,6 +25,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print(getFullName('John', 'Doe')); //function calling is doing here
+    conditions();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
