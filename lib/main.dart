@@ -15,8 +15,14 @@ void test() {
   }
 }
 void listing(){
-  List<int> numbers = [1,3,5,7] //Creation of list 
-   print()
+  List<int> numbers = [1,3,5,7]; //Creation of list 
+   print("$numbers \nPrinting number at index 0: ${numbers[0]}");
+   numbers.add(2);
+   numbers.addAll([4,6]);
+   print(numbers);
+   numbers.remove(2);
+   print(numbers);
+
 
 }
 
@@ -32,6 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     print(getFullName('John', 'Doe')); //function calling is doing here
     test();
+    listing();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
