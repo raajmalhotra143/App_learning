@@ -1,54 +1,8 @@
+import 'Basic.dart';
 import 'package:flutter/material.dart';
 
 String getFullName(String firstName, String lastName) {
   return "$firstName $lastName"; //creating function here
-}
-
-void test() {
-  const age = 20;
-  if (age == 21) {
-    print("age is 21");
-  } else if (age == 22) {
-    print("Age is 22");
-  } else {
-    print("Age is 20");
-  }
-}
-void listing(){
-  // 1. Declaration
-  List<int> scores = [85, 92, 78];
-  print("Initial List: $scores");
-
-  // 2. Adding single item
-  scores.add(95);
-  print("After adding 95: $scores");
-
-  // Adding multiple items
-  scores.addAll([60, 70]);
-  print("After adding [60, 70]: $scores");
-
-  // 3. Modifying item at index 0
-  scores[0] = 90;
-  print("Modifying item at index 0 is :- ${scores[0]}");
-  print("List after modification: $scores");
-
-  // 4. Searching
-  print("Does list contain 92? :- ${scores.contains(92)}");
-  print("Index of 78 is :- ${scores.indexOf(78)}");
-
-  // 5. Removing specific value
-  scores.remove(60);
-  print("After removing value 60: $scores");
-
-  // Removing by index
-  scores.removeAt(1);
-  print("After removing item at index 1: $scores");
-
-  // 6. Loop printing
-  print("\nCurrent Scores:");
-  for (var score in scores) {
-    print("Scored: $score");
-  }
 }
 
 
@@ -64,8 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(getFullName('John', 'Doe')); //function calling is doing here
-    test();
+    conditional_statements();
     listing();
+    Sets();
+    maps();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
