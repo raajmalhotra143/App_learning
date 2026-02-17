@@ -5,8 +5,6 @@ String getFullName(String firstName, String lastName) {
   return "$firstName $lastName"; //creating function here
 }
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -22,6 +20,7 @@ class MyApp extends StatelessWidget {
     listing();
     Sets();
     maps();
+    nullsafety();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

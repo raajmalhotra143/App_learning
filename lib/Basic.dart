@@ -87,3 +87,31 @@ void maps() {
 
   print('Full User Data: $user');
 }
+void nullsafety(){
+  // 1. COMMAND: Nullable Type Declaration (?)
+  // ACTION: This allows the variable 'userStatus' to be empty (null).
+  String? userStatus; 
+  print('Step 1: The initial value of userStatus is: $userStatus');
+
+  // 2. COMMAND: If-Null Operator (??)
+  // ACTION: If 'userStatus' is null, it uses "Offline" instead.
+  String currentDisplay = userStatus ?? "Offline";
+  print('Step 2: Displaying status (fallback to Offline): $currentDisplay');
+
+  // 3. COMMAND: Null-Aware Assignment (??=)
+  // ACTION: Since 'userStatus' IS null, this assigns "Active" to it.
+  userStatus ??= "Active";
+  print('Step 3: After using ??= operator, userStatus is now: $userStatus');
+
+  // 4. COMMAND: Null-Aware Access (?.)
+  // ACTION: Tries to get the length. Since 'note' is null, it returns null instead of crashing.
+  String? note;
+  var noteLength = note?.length;
+  print('Step 4: Safe access of null variable length: $noteLength');
+
+  // 5. COMMAND: Null Assertion Operator (!)
+  // ACTION: We "force" Dart to treat this as not null. 
+  String? confirmedEmail = "test@test.com";
+  String upperEmail = confirmedEmail!.toUpperCase();
+  print('Step 5: Forced assertion and conversion: $upperEmail');
+}
