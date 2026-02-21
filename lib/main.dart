@@ -16,11 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(getFullName('John', 'Doe')); //function calling is doing here
-    conditional_statements();
-    listing();
-    Sets();
-    maps();
-    nullsafety();
+    Allfunctions();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

@@ -115,3 +115,10 @@ void nullsafety(){
   String upperEmail = confirmedEmail!.toUpperCase();
   print('Step 5: Forced assertion and conversion: $upperEmail');
 }
+void Allfunctions (){
+  conditional_statements();
+    listing();
+    Sets();
+    maps();
+    nullsafety();
+}
