@@ -105,6 +105,7 @@ void nullsafety() {
   // 4. COMMAND: Null-Aware Access (?.)
   // ACTION: Tries to get the length. Since 'note' is null, it returns null instead of crashing.
   String? note;
+  // ignore: dead_code
   var noteLength = note?.length;
   print('Step 4: Safe access of null variable length: $noteLength');
 
