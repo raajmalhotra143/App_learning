@@ -8,6 +8,7 @@ void conditional_statements() {
     print("Age is 20");
   }
 }
+
 void listing() {
   // 1. Declaration
   List<int> scores = [85, 92, 78];
@@ -45,6 +46,7 @@ void listing() {
     print("Scored: $score");
   }
 }
+
 void Sets() {
   // 1. Creating a Set
   Set<String> ingredients = {'Tomato', 'Onion', 'Garlic'};
@@ -68,17 +70,13 @@ void Sets() {
 
 void maps() {
   // 1. Defining a Map with String keys and dynamic values
-  Map<String, dynamic> user = {
-    'name': 'Ali',
-    'age': 25,
-    'isVerified': true,
-  };
+  Map<String, dynamic> user = {'name': 'Ali', 'age': 25, 'isVerified': true};
 
   // 2. Adding a new key-value pair
   user['email'] = 'ali@example.com';
 
   // 3. Updating an existing key
-  user['age'] = 26; 
+  user['age'] = 26;
 
   // 4. Checking for a key before accessing
   if (user.containsKey('name')) {
@@ -87,10 +85,11 @@ void maps() {
 
   print('Full User Data: $user');
 }
-void nullsafety(){
+
+void nullsafety() {
   // 1. COMMAND: Nullable Type Declaration (?)
   // ACTION: This allows the variable 'userStatus' to be empty (null).
-  String? userStatus; 
+  String? userStatus;
   print('Step 1: The initial value of userStatus is: $userStatus');
 
   // 2. COMMAND: If-Null Operator (??)
@@ -110,15 +109,16 @@ void nullsafety(){
   print('Step 4: Safe access of null variable length: $noteLength');
 
   // 5. COMMAND: Null Assertion Operator (!)
-  // ACTION: We "force" Dart to treat this as not null. 
+  // ACTION: We "force" Dart to treat this as not null.
   String? confirmedEmail = "test@test.com";
-  String upperEmail = confirmedEmail!.toUpperCase();
+  String upperEmail = confirmedEmail.toUpperCase();
   print('Step 5: Forced assertion and conversion: $upperEmail');
 }
-void Allfunctions (){
+
+void Allfunctions() {
   conditional_statements();
-    listing();
-    Sets();
-    maps();
-    nullsafety();
+  listing();
+  Sets();
+  maps();
+  nullsafety();
 }
