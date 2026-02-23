@@ -120,7 +120,7 @@ void nullsafety() {
   // 5. COMMAND: Null Assertion Operator (!)
   // ACTION: We "force" Dart to treat this as not null.
   String? confirmedEmail = "test@test.com";
-  String upperEmail = confirmedEmail!.toUpperCase();
+  String upperEmail = confirmedEmail.toUpperCase();
   debugPrint('Step 5: Forced assertion and conversion: $upperEmail');
 }
 
