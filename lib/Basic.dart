@@ -114,14 +114,13 @@ void nullsafety() {
   // 4. COMMAND: Null-Aware Access (?.)
   // ACTION: Tries to get the length. Since 'note' is null, it returns null instead of crashing.
   String? note;
-  // ignore_for_file: file_names
   var noteLength = note?.length;
   debugPrint('Step 4: Safe access of null variable length: $noteLength');
 
   // 5. COMMAND: Null Assertion Operator (!)
   // ACTION: We "force" Dart to treat this as not null.
   String? confirmedEmail = "test@test.com";
-  String upperEmail = confirmedEmail.toUpperCase();
+  String upperEmail = confirmedEmail!.toUpperCase();
   debugPrint('Step 5: Forced assertion and conversion: $upperEmail');
 }
 
